@@ -17,4 +17,7 @@ class Venue < ApplicationRecord
     matching_comments = Comment.where({ :venue_id => my_id })
     return matching_comments
   end
+
+  #belongs_to(:commenter, { :class_name => "User", :foreign_key => "author_id"})
+
 end
